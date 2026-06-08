@@ -1,0 +1,50 @@
+﻿*{
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#efefef;
+}
+
+header{
+    height:70px;
+    background:#5f7184;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+}
+
+.menu{
+    display:flex;
+    gap:15px;
+    padding:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:140px;
+    height:130px;
+    background:#5f7184;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+.card:hover{
+    transform:translateY(-3px);
+}
+
+main{
+    padding:20px;
+}
+.dados{
+    background:rgba(14, 14, 15, 0.596);
+    border-radius:10px;
+    padding:30px;
+}

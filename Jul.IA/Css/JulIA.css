@@ -1,0 +1,284 @@
+﻿/* 1. RESET E TIPOGRAFIA */
+*{
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* 2. ESTILO BODY */
+body{
+    background:#efefef;
+    margin:0;
+}
+
+/* 3. CABEÇALHO */
+header{
+    height:70px;
+    background:#5f7184;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+}
+
+.usuario-area{
+    
+    display: flex;
+    align-items: center;
+    gap: 15px; /* distância entre usuário e sair */
+}
+
+/* 4. LOGO */
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+/* 5. TEXTO DO USUÁRIO */
+.usuario{
+    font-size:24px;
+}
+
+.Sair{
+    color:#ccc;
+    font-size:24px;
+}
+
+/* 6. MENU */
+.menu{
+    display:flex;
+    gap:15px;
+    padding:20px;
+    flex-wrap:wrap;
+}
+
+.menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.chat-link {
+    text-decoration: none;
+    color: #004b87;
+}
+
+.chat-link:hover {
+    color: #7b162a;
+}
+
+/* 7. CARTÕES */
+.card{
+    width:140px;
+    height:130px;
+    background:#5f7184;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+}
+
+/* 8. CONTEÚDO PRINCIPAL */
+main{
+    padding:20px;
+}
+
+/* 9. CAIXA DE DADOS */
+.dados{
+    background:white;
+    border-radius:10px;
+    padding:30px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+/* 10. TÍTULO DOS DADOS */
+.dados h1{
+    margin-bottom:25px;
+}
+
+/* 11. LAYOUT EM GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* 12. CHAT */
+
+.chat{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:380px;
+    height:550px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 0 25px rgba(0,0,0,.25);
+}
+
+/* 13. CABEÇALHO DO CHAT */
+.chat-header{
+    background:#9e1730;
+    color:white;
+    padding: 10px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* 14. AVATAR DO CHAT */
+.chat-header img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+
+/* 15. CORPO DO CHAT */
+.chat-body {
+    background-image: url('../Imagens/Fundo.png');
+    background-color: rgba(255, 255, 255, 0.45);
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 15px;
+}
+
+/* 16. BALÕES DE MENSAGEM */
+.msg {
+    background:white;
+    padding:12px;
+    border-radius:10px;
+    box-shadow:0 1px 5px rgba(0,0,0,.1);
+    margin-bottom:18px;
+}
+
+/* 17. RODAPÉ DO CHAT */
+.chat-footer{
+    display:flex;
+    padding:10px;
+    border-top:1px solid #ccc;
+    gap:10px;
+}
+
+/* 18. CAMPO DE TEXTO */
+.chat-footer input{
+    flex:1;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:20px;
+}
+
+/* 19. BOTÃO ENVIAR */
+.chat-footer button{
+    background:#170a63;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+
+/* 20. AVATAR INICIAL */
+#avatar {
+    width: 300px;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.5s ease, opacity 0.4s ease, width 0.2s ease;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* 21. AVATAR ESCONDIDO */
+#avatar.escondido {
+    transform: translateX(400px);
+    opacity: 0;
+}
+
+/* 22. AVATAR MINIMIZADO */
+#avatar.minimizado {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 23. CAIXA DE CHAT */
+#chat-container {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 120px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 998;
+}
+
+/* 24. CHAT ABERTO */
+#chat-container.aberto {
+    display: block;
+}
+
+.chat-header {
+    background: #004b87;
+
+    color: white;
+
+    padding: 15px;
+
+    font-weight: bold;
+}
+
+/* Corpo */
+
+.chat-body {
+    height: 380px;
+
+    padding: 10px;
+
+    overflow-y: auto;
+}
+
+/* Rodapé */
+
+.chat-footer {
+    display: flex;
+
+    gap: 5px;
+
+    padding: 10px;
+
+    border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+    flex: 1;
+
+    padding: 8px;
+}
+
+.chat-footer button {
+    padding: 8px 15px;
+
+    cursor: pointer;
+}
+

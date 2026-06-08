@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Jul.IA</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4b79a1, #283e51);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 16px;
+            padding: 32px;
+            width: 320px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(12px);
+        }
+        .login-card h1 {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 24px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        input,
+        button {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        input {
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            background: rgba(255, 255, 255, 0.97);
+            color: #0b003c;
+            outline: none;
+        }
+        input:focus {
+            border-color: #7fb3ff;
+            box-shadow: 0 0 0 3px rgba(127, 179, 255, 0.15);
+        }
+        button {
+            border: none;
+            background: #5dade2;
+            color: #1b2838;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        button:hover {
+            background: #83c4ff;
+        }
+        .message {
+            margin-top: 12px;
+            min-height: 24px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .message.error {
+            color: #ffb3b3;
+        }
+        .hint {
+            margin-top: 16px;
+            font-size: 12px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.72);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h1>Login do Siga</h1>
+        <form id="loginForm">
+            <label for="username">Usuário</label>
+            <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <div id="message" class="message"></div>
+        <div class="hint">Usuário válido: <strong>aluno</strong> / Senha válida: <strong>1234</strong></div>
+    </div>
+
+    <script>
+        const validUser = 'aluno';
+        const validPassword = '1234';
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+            const messageEl = document.getElementById('message');
+
+            if (username === validUser && password === validPassword) {
+                messageEl.textContent = 'Login realizado com sucesso! Redirecionando...';
+                messageEl.className = 'message';
+                setTimeout(() => {
+                    window.location.href = 'JulIA.html';
+                }, 500);
+            } else {
+                messageEl.textContent = 'Usuário ou senha incorretos. Tente novamente.';
+                messageEl.className = 'message error';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f3f3f8;
+}
+
+.topbar{
+background:#667789;
+height:56px;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 20px;
+}
+
+main{
+padding:40px;
+}
+
+.page-header{
+background:#d9d6d6;
+padding:20px;
+display:flex;
+justify-content:space-between;
+border-radius:6px;
+margin-bottom:25px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.card{
+background:white;
+border:1px solid #bfc3c8;
+border-radius:5px;
+overflow:hidden;
+}
+
+.card-header{
+background:#5f6b78;
+color:white;
+padding:15px;
+height:150px;
+}
+
+.info{
+padding:15px;
+}
+
+.info div{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid #ddd;
+}

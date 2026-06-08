@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- 1. METADADOS DO DOCUMENTO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jul.IA - Assistente Virtual</title>
+    <link rel="stylesheet" href="../Css/JulIA.css">
+</head>
+<body>
+    <!-- 2. CABEÇALHO -->
+    <header>
+        <div class="logo">CPS SIGA</div>
+        <div class="usuario-area">
+            <div class="usuario">Olá, Aluno</div>
+            <a href="Login.html" class="Sair">Sair</a>
+            </div>
+    </header>
+
+    <!-- 3. MENU -->
+    <section class="menu">
+        <a href="Notas.html"><div class="card" id="link-1">Notas</div></a>
+        <a href="Faltas.html"><div class="card">Faltas</div></a>
+        <a href="Horario.html"><div class="card">Horário</div></a>
+        <a href="Disciplinas.html"><div class="card">Disciplinas</div></a>
+        <a href="Historico.html"><div class="card">Histórico</div></a>
+    </section>
+
+    <!-- 4. CONTEÚDO PRINCIPAL -->
+    <main>
+        <div class="dados">
+            <h1>Aluno</h1>
+            <div class="grid">
+                <div><strong>Status:</strong> Em Curso</div>
+                <div><strong>PP:</strong> 15.15%</div>
+                <div><strong>Curso:</strong> Desenvolvimento de Software Multiplataforma</div>
+                <div><strong>Semestre:</strong> 2</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 5. AVATAR DA ASSISTENTE -->
+    <img src="../Imagens/Personagem.png" alt="Assistente Virtual" id="avatar">
+
+    <!-- 6. CHAT -->
+    <div id="chat-container">
+        <div class="chat-header">Jul.IA - Assistente Virtual</div>
+        <div class="chat-body">
+        
+        </div>
+        <div class="chat-footer">
+            <input type="text" placeholder="Digite aqui ..." id="input-msg">
+            <button id="btn-enviar" onclick="enviarMensagem()">Enviar</button>
+        </div>
+    </div>
+
+    <script src="../Js/JS_JulIA.js"></script>
+</body>
+</html>
